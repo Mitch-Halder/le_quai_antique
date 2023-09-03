@@ -1,0 +1,590 @@
+* {
+    font-family: 'Dancing Script', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-weight: 300;
+    color: #111;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+    background-color: #fafafa;
+}
+
+.logo {
+    color: #111;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #fb911f;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: #fafafa;
+    box-shadow: inset 0px -1px 0px #c5c5c6;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navlinks-container a {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #111;
+    display: inline-block;
+    position: relative;
+}
+
+.navlinks-container a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+    background: #fb911f;
+}
+
+.navlinks-container a:hover::after {
+    transform: scaleX(1);
+}
+
+.banniere {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/Users/mitch/studi/ECF/Le-Quai-Antique-test-3/Images-restaurant/outdoor-dining-1846137_1920.jpg);
+    background-size: cover;
+}
+
+.banniere .contenu {
+    max-width: 70%;
+    text-align: center;
+}
+
+.banniere .contenu h2 {
+    color: #fff;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+
+.banniere .contenu span {
+    color: #fb911f;
+}
+
+.contenu p:nth-child(2) {
+    color: #ffff;
+    font-size: 1.2em;
+}
+
+.toreserve {
+    margin-top: 20px;
+}
+
+.btn-toreserve {
+    text-align: center;
+    background-color: #fb911f;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+}
+
+.btn-toreserve a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.btn-toreserve:hover {
+    background: #d87710;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+section {
+    padding: 100px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50 {
+    position: relative;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+}
+
+.row .col50 h2{
+    margin-bottom: 20px;
+}
+
+.titre-text {
+    color: #000;
+    font-size: 2em;
+    font-weight: 300px;
+    text-transform: capitalize;
+}
+
+.titre-text span {
+    color: #fb911f;
+    font-size: 1.5em;
+    font-weight: 700px;
+}
+
+.row .col50 img {
+    height: 300px;
+    width: 450px;
+    position: relative;
+}
+
+.titre {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.plats {
+    margin-top: -180px;
+    margin-bottom: -150px;
+}
+
+.plats .contenu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.plats .contenu .box {
+    width: 300px;
+    margin: 20px;
+    border: 20px solid #fff;
+    box-shadow: 20px 15px 35px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.plats .contenu .box .imbox {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+
+.plats .contenu .box .imbox img {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.plats .contenu .box .text {
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+}
+
+.plats .contenu .box .text h3 {
+    margin-top: 0.25em;
+    text-decoration: none;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.menus {
+    text-align: center;
+    background-color: #fb911f;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+}
+
+.menus:hover {
+    background: #d87710;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.menus a {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.overlay {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: 0.3s;
+    transform-origin: bottom;
+}
+
+.box:hover .overlay {
+    transform: scale(1);
+}
+
+.experts {
+    margin-top: -180px;
+}
+
+.experts .contenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.experts .contenu .box {
+    width: 250px;
+    margin: 15px;
+}
+
+.experts .contenu .box img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.experts .contenu .box h3 {
+    color: #111;
+    font-weight: 400px;
+    text-align: center;
+}
+
+.blanc .titre-text, .blanc p {
+    color: #fff;
+}
+
+.contact {
+    background-image: url(/Users/mitch/studi/ECF/Le-Quai-Antique-test-3/Images-restaurant/cake-1971552_1920.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    background-position: unset;
+}
+
+.contact .titre-text span {
+    color: #fb911f;
+    font-size: 2em;
+}
+
+.contactform {
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.8);
+    max-width: 500px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 38%;
+}
+
+
+.contactform .inputboite {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contactform h3 {
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contactform .inputboite input,
+.contactform .inputboite textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300px;
+    resize: none;
+}
+
+.contactform .inputboite input[type="submit"] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff;
+    background: #fb911f;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    max-width: 120px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.copyright {
+    padding: 20px 40px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(228, 222, 222,);
+    text-align: center;
+}
+
+.copyright p:nth-child(1) {
+    color: #333;
+}
+
+.copyright a {
+    color: #fb911f;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.horaires {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horaires span {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fb911f;
+}
+
+.horaires h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.horaires p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 900px) {
+    header {
+        align-items: center;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .hamburger {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        background: #fafafa;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        pointer-events: none;
+        transform: opacity 0.3s 0.15s ease-out;
+    }
+
+    .hamburger span:nth-child(1),
+    .hamburger span:nth-child(3) {
+        transition: transform 0.3s ease-out;
+    }
+
+    .hamburger span:nth-child(1) {
+        transform: translateY(7px);
+    }
+
+    .hamburger span:nth-child(3) {
+        transform: translateY(-7px);
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translate(0) rotate(135deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transition: opacity 0s ease-out;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translate(0) rotate(-135deg);
+    }
+
+    .navlinks-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        background: #fafafa;
+        top: 100%;
+        left: 0;
+        transform: translate(-100%);
+        height: 100vh;
+        padding: 15px 50px 15px 20px;
+        border-right: 1px solid #c5c5c6;
+        transition: transform 0.3s ease-out;
+    }
+
+    .open {
+        transform: translate(0%);
+        transition: 0.3s;
+    }
+
+    .navlinks-container a {
+        font-size: 18px;
+        margin: 10px 0px;
+        color: #111;
+    }
+
+    .banniere .contenu h2 {
+        font-size: 2em;
+    }
+
+    .row .col50 img {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .contenu p:nth-child(2) {
+        font-size: 1.2em;
+    }
+
+    .expert {
+        margin-top: 0px;
+    }
+
+    .experts h2 {
+        padding-top: 150px;
+    }
+
+    .plats {
+        margin-top: 0;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contactform {
+        margin-left: 20%;
+    }
+    .row .col50 {
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .banniere .contenu h2 {
+        font-size: 2em;
+        color: #fff;
+    }
+
+    .titre-text {
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .temoignages h2 {
+        font-size: 1.1em;
+    }
+
+    .temoignages p {
+        text-align: center;
+    }
+
+    .row .col50 img {
+        display: none;
+    }
+
+    .experts {
+        margin-top: 25px;
+    }
+
+    .experts h2 {
+        padding-top: 90px;
+    }
+
+    .blanc .titre-text, .blanc p {
+        color: #635e5e;
+    }
+}
